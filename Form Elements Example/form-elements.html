@@ -36,18 +36,17 @@
                     <section>
                         <div>
                             <label for="firstName">First Name:</label><br />
-                            <input type="text" name="firstName" id="firstName" placeholder="Herman" required />
+                            <input type="text" name="firstName" id="firstName" placeholder="Herman" maxlength="20" required />
                         </div>
 
                         <div>
                             <label for="middleInitial">Middle Initial:</label><br />
-                            <input type="text" name="middleInitial" id="middleInitial" placeholder="P" />
+                            <input type="text" name="middleInitial" id="middleInitial" placeholder="P" maxlength="1" />
                         </div>
 
                         <div>
                             <label for="lastName">Last Name:</label><br />
-
-                            <input type="text" name="lastName" id="lastName" placeholder="Munster" required />
+                            <input type="text" name="lastName" id="lastName" placeholder="Munster" maxlength="20" required />
                         </div>
 
                         <div class="mb-3 col">
@@ -55,9 +54,19 @@
                             <input type="date" name="dateOfBirth" id="dateOfBirth" required />
                         </div>
 
+                        <div class="mb-3 col">
+                            <label for="age">Age:</label><br />
+                            <input type="number" name="age" id="age" step="1" min="19" max="120" required />
+                        </div>
+
                         <div>
                             <label for="married">Married:</label><br />
                             <input type="radio" name="married" id="married" value="yes" />yes <input type="radio" name="married" id="married" value="no" />no
+                        </div>
+
+                        <div>
+                            <label for="favourite-colour">Favourite Colour:</label><br />
+                            <input type="color" name="favourite-colour" id="favourite-colour" value="yes" />
                         </div>
                     </section>
                 </fieldset>
@@ -83,7 +92,7 @@
                 </fieldset>
 
                 <fieldset>
-                    <legend>Address Information</legend>
+                    <legend>Canadian Address Information</legend>
 
                     <section>
                         <div>
@@ -102,13 +111,33 @@
                         </div>
 
                         <div>
-                            <label for="province">Province/State:</label><br />
-                            <input type="text" name="province" id="province" placeholder="Missouri" required />
+                            <label for="province">Province:</label><br />
+                            <select name="province" id="province" required>
+                                <option>Select a province</option>
+                                <option value="British Columbia">British Columbia</option>
+                                <option value="Alberta">Alberta</option>
+                                <option value="Saskatchewan">Saskatchewan</option>
+                                <option value="Manitoba">Manitoba</option>
+                                <option value="Ontario">Ontario</option>
+                                <option value="Quebec">Quebec</option>
+                                <option value="Nova Scotia">Nova Scotia</option>
+                                <option value="Prince Edward Island">Prince Edward Island</option>
+                                <option value="New Brunswick">New Brunswick</option>
+                                <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+                                <option value="Northwest Territories">Northwest Territories</option>
+                                <option value="Yukon">Yukon</option>
+                                <option value="Nunavit">Nunavit</option>
+                            </select>
                         </div>
 
                         <div>
-                            <label for="country">Country:</label><br />
-                            <input type="text" name="country" id="country" placeholder="United States of America" required />
+                            <label for="postal-code">Postal Code:</label><br />
+                            <input type="text" name="postal-code" id="postal-code" placeholder="L4M 26Y" required />
+                        </div>
+
+                        <div>
+                            <label for="notes">Notes:</label><br />
+                            <textarea name="notes" id="notes" cols="30" rows="10" placeholder="Don't come up the drive"></textarea>
                         </div>
                     </section>
                 </fieldset>
