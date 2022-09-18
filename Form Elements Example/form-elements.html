@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>HTML Web Form Elements</title>
+    </head>
+
+    <body>
+        <main>
+            <header>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="./">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="./form-elements.html">Subscribe</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <h1>My Subscription Form</h1>
+                <p>Sign up and enjoy being a member!</p>
+            </header>
+
+            <hr />
+
+            <form action="/thanks.html" method="post" name="my-subscription-form" netlify>
+                <h2>Subscription Form</h2>
+
+                <fieldset>
+                    <legend>User Information</legend>
+                    <section>
+                        <div>
+                            <label for="firstName">First Name:</label><br />
+                            <input type="text" name="firstName" id="firstName" placeholder="Herman" required />
+                        </div>
+
+                        <div>
+                            <label for="middleInitial">Middle Initial:</label><br />
+                            <input type="text" name="middleInitial" id="middleInitial" placeholder="P" />
+                        </div>
+
+                        <div>
+                            <label for="lastName">Last Name:</label><br />
+
+                            <input type="text" name="lastName" id="lastName" placeholder="Munster" required />
+                        </div>
+
+                        <div class="mb-3 col">
+                            <label for="dateOfBirth">Date of Birth:</label><br />
+                            <input type="date" name="dateOfBirth" id="dateOfBirth" required />
+                        </div>
+
+                        <div>
+                            <label for="married">Married:</label><br />
+                            <input type="radio" name="married" id="married" value="yes" />yes <input type="radio" name="married" id="married" value="no" />no
+                        </div>
+                    </section>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    <section>
+                        <div>
+                            <label for="email">Email:</label><br />
+                            <input type="email" name="email" id="email" placeholder="herman.munster@mockingbirdland.com" required />
+                        </div>
+
+                        <div>
+                            <label for="phone">Phone:</label><br />
+                            <input type="tel" name="phone" id="phone" placeholder="1 (555) 555-5555" />
+                        </div>
+
+                        <div>
+                            <label for="url">Website:</label><br />
+                            <input type="url" name="url" id="url" placeholder="https://www.mockingbird-lane.com" />
+                        </div>
+                    </section>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Address Information</legend>
+
+                    <section>
+                        <div>
+                            <label for="streetAddress">Street Address:</label><br />
+                            <input type="text" name="streetAddress" id="streetAddress" placeholder="1313 Mockingbird Lane" required />
+                        </div>
+
+                        <div>
+                            <label for="additionalStreetInformation">Additional Street Information:</label><br />
+                            <input type="text" name="additionalStreetInformation" id="additionalStreetInformation" placeholder="Apartment B, Complex C" />
+                        </div>
+
+                        <div>
+                            <label for="city">City:</label><br />
+                            <input type="text" name="city" id="city" placeholder="Mockingbrid Heights" required />
+                        </div>
+
+                        <div>
+                            <label for="province">Province/State:</label><br />
+                            <input type="text" name="province" id="province" placeholder="Missouri" required />
+                        </div>
+
+                        <div>
+                            <label for="country">Country:</label><br />
+                            <input type="text" name="country" id="country" placeholder="United States of America" required />
+                        </div>
+                    </section>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Subscription Options</legend>
+
+                    <section>
+                        <div>
+                            <input class="form-check-input" type="checkbox" name="newsletter" id="newsletter" value="true" />
+                            <label class="form-check-label" for="newsletter">Newsletter Opt-in</label>
+                        </div>
+
+                        <div>
+                            <input class="form-check-input" type="checkbox" name="monthly-mailer" id="monthly-mailer" value="true" />
+                            <label class="form-check-label" for="monthly-mailer">Monthly Mailer</label>
+                        </div>
+                    </section>
+                </fieldset>
+
+                <div>
+                    <input type="submit" value="Submit" />
+                </div>
+            </form>
+        </main>
+    </body>
+</html>
